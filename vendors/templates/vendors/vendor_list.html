@@ -1,0 +1,13 @@
+{%  extends 'vendors/base.html' %}
+{% block content %}
+    {% for vendor in vendors %}
+        <div class="partner">
+            <div class="date">
+                <p>added: {{ vendor.added_dt }}</p>
+            </div>
+            <a href="{% url 'vendor_detail' pk=vendor.pk %}">{{ vendor.name1 }}</a>
+            <p>{{ vendor.vn_ent }}</p>
+            <p>{{ vendor.vn_ent_id }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
